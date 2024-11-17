@@ -23,11 +23,14 @@
 % along with this program.  If not, see <http://www.gnu.org/licenses/>.
 %
 %--------------------------------------------
+% Warning that we're running Simon Pfahler's version of pgfplots
+\PackageWarning{pgfplots}{This is Simon Pfahler's version of pgfplots}
+
 \IfFileExists{pgfplots.revision.tex}{\input pgfplots.revision.tex } {%
 	\def\pgfplotsrevision{0}%
 	\def\pgfplotsversion{0.0}%
-    \def\pgfplotsversiondatetime{2014-07-01 00:00:00 +100}%
-    \def\pgfplotsrevisiondatetime{2014-07-01 00:00:00 +100}%
+	\def\pgfplotsversiondatetime{2014-07-01 00:00:00 +100}%
+	\def\pgfplotsrevisiondatetime{2014-07-01 00:00:00 +100}%
 	\def\pgfplotsversiondate{2014/07/01}%
 	\def\pgfplotsrevisiondate{2014/07/01}%
 }
@@ -76,12 +79,12 @@
 % This is *identical* to \pgfutil@IfUndefined . I copied it here
 % because pgf up to and including version 2.10 does not contain it.
 \def\pgfplotsutil@IfUndefined#1{%
-  \begingroup\expandafter\expandafter\expandafter\endgroup
-  \expandafter\ifx\csname#1\endcsname\relax
-    \expandafter\pgfutil@firstoftwo
-  \else
-    \expandafter\pgfutil@secondoftwo
-  \fi
+	\begingroup\expandafter\expandafter\expandafter\endgroup
+	\expandafter\ifx\csname#1\endcsname\relax
+		\expandafter\pgfutil@firstoftwo
+	\else
+		\expandafter\pgfutil@secondoftwo
+	\fi
 }
 
 \gdef\pgfplots@glob@TMPa{}%
